@@ -14,7 +14,7 @@ function App() {
   
     
     <Router>
-    <Route path="/contact">
+    <Route path="/home">
       <Homepage />
     </Route>
     <Route path="/about">

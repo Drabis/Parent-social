@@ -1,0 +1,54 @@
+.footer {
+    width: 100%;
+    
+    border-radius: 10px;
+    align-items: center;
+}
+
+.aboutImg{
+    width: 300px;
+}
+.footerItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footerTitle{
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    color: #222;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+.footerList{
+    list-style: none;
+    margin-bottom: 30px;
+}
+.footerListItem{
+    text-decoration: none;
+    width: 50%;
+    list-style: none;
+    margin-top: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+.footerSocial {
+    margin-top: 15px;
+    width: 205px;
+    align-items: center;
+    justify-content: center;
+}
+.sideIcon{
+    margin-left: 15px;
+    font-size: 25px;
+    margin-right: 30px;
+    color: #444;
+    cursor: pointer;
+}
