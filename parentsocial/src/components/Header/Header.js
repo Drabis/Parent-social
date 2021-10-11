@@ -32,10 +32,12 @@ import {
                 <NavLink href="/playDay/">Daycare</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Interview Clothing</NavLink>
+                <NavLink href="/playDay/">Interview-Prep</NavLink>
               </NavItem>
-            </Nav>
-            <NavbarText>Interview-Prep</NavbarText>
+              <NavItem>
+                <NavLink href="/interviewClothes">Interview Clothing</NavLink>
+              </NavItem>
+            </Nav>   
             <NavItem>
                 <NavLink href="/login">Logout</NavLink>
               </NavItem>
