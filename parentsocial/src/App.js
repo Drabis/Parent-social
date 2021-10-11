@@ -7,7 +7,7 @@ import InterviewClothes from "./components/pages/Interview-clothes/InterviewClot
 import InterviewPrep from "./components/pages/Interview-prep/InterviewPrep";
 import PlayDay from "./components/pages/PlayDay/Playday";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
+
 
 function App() {
   return (
