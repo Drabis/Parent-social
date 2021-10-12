@@ -1,6 +1,9 @@
 import React from 'react'
 import Image from "../../assets/Images/swing.jpg";
-// import Image from "../../assets/Images/kids-with-balloon.png"
+import DaycareImg from "../../assets/Images/painting.jpg";
+import InterviewClothesImg from "../../assets/Images/interClothes.jpg"
+import InterviewPrepImg from "../../assets/Images/interPrep.jpg";
+import "./postCard.css"
 import {
     Card, Button, CardImg, CardTitle, CardText, CardGroup,
     CardSubtitle, CardBody,Row, Col 
@@ -10,53 +13,53 @@ import {
   const PostCard = (props) => {
     return (
      <>
-        <Row>
+        <Row className="row">
         <Col sm="6">
-      <CardGroup >
-        <Card>
-          <CardImg top width="100%" src={Image} alt="Card image cap" />
+      <CardGroup className="cardGroup">
+        <Card className="card">
+          <CardImg src={Image} alt="Card image cap" />
           <CardBody>
-            <CardTitle tag="h5">Card title</CardTitle>
+            <CardTitle tag="h5">Play-Date</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-            <Button>Button</Button>
+            <CardText> Our focus offers specialized programs that provide care for your children when juggling work-life with child-care. Offering a joyful moment for your children </CardText>
+            <Button>View</Button>
           </CardBody>
         </Card>
-        <Card>
-          <CardImg top width="100%" src={Image} alt="Card image cap" />
-          <CardBody>
-            <CardTitle tag="h5">Card title</CardTitle>
+        <Card className="card">
+          <CardImg src={DaycareImg} alt="Card image cap" />
+          <CardBody className="cardGroup">
+            <CardTitle tag="h5">Daycare</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-            <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-            <Button>Button</Button>
+            <CardText>Our teachers are all experienced and dedicated professionals who love children. What makes us special? We aim to educate and grow the children of today by offering the best class.</CardText>
+            <Button>View</Button>
           </CardBody>
         </Card>
         </CardGroup>
         </Col>
       </Row>
 
-<br/>
 
-<Row>
+
+<Row className="row">
     <Col sm="6">
     <CardGroup >
-    <Card>
-    <CardImg top width="100%" src={Image} alt="Card image cap" />
-    <CardBody>
-        <CardTitle tag="h5">Card title</CardTitle>
+    <Card className="card">
+    <CardImg src={InterviewPrepImg} alt="Card image cap" />
+    <CardBody className="cardGroup">
+        <CardTitle tag="h5">Interview- Prep</CardTitle>
         <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-        <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-        <Button>Button</Button>
+        <CardText>Still confused about what question the interviewer may ask or worry about saying the wrong thing? Here you will have all the best content to be prepared for your interview day. </CardText>
+        <Button>View</Button>
     </CardBody>
     </Card>
     <br/>
-    <Card>
-    <CardImg top width="100%" margin-left="10%" src={Image} alt="Card image cap" />
-    <CardBody>
-        <CardTitle tag="h5">Card title</CardTitle>
+    <Card className="card">
+    <CardImg src={InterviewClothesImg} alt="Card image cap" />
+    <CardBody className="cardGroup">
+        <CardTitle tag="h5">Interview clothing</CardTitle>
         <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-        <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-        <Button>Button</Button>
+        <CardText>Interview day is around the corner and you still don't know what to wear, don't worry we got you covered. Visit this page to see all the recommendations we got for you.</CardText>
+        <Button>View</Button>
     </CardBody>
     </Card>
     </CardGroup>
