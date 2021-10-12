@@ -1,0 +1,13 @@
+.header {
+    background-image: linear-gradient(to left, violet, rgb(114, 57, 155), rgb(110, 110, 238), rgb(155, 236, 155), rgb(238, 238, 135), rgb(240, 176, 59), rgb(235, 225, 225));
+  font-weight: bold;
+}
+
+.navbarBrand{
+ font-weight:bolder;
+ font-family: 'Akronim', cursive;
+}
+
+.mr-auto{
+    flex: end;
+}

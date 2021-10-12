@@ -2,9 +2,6 @@ import React from "react";
 import "./signUp.css";
 
 
-const App = props => (
-    <SignupForm />
-);
   
 
 class SignupForm extends React.Component{
@@ -28,7 +25,7 @@ const Form = props => (
    <div>
      <FormInput description="Username" placeholder="Enter your username" type="text" />
      <FormInput description="Password" placeholder="Enter your password" type="password"/>
-     <FormButton title="Log in"/>
+     <FormButton title="Sign Up"/>
    </div>
 );
 

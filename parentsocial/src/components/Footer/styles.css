@@ -1,13 +1,13 @@
 .footer {
     width: 100%;
-    
+    /* background-color: #d07bb3; */
+    background-image: linear-gradient(to left, violet, rgb(114, 57, 155), rgb(110, 110, 238), rgb(155, 236, 155), rgb(238, 238, 135), rgb(240, 176, 59), rgb(235, 225, 225));
     border-radius: 10px;
     align-items: center;
+    height: fit-content;
+    margin-top: 10%;
 }
 
-.aboutImg{
-    width: 300px;
-}
 .footerItem{
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     font-family: 'Varela Round', sans-serif;
     font-size: 12px;
     color: #222;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 20px;
     text-align: center;
 }

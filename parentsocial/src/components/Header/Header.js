@@ -1,38 +1,34 @@
 import React from 'react'
+import Daycare from "../pages/Daycare/Daycare";
 import { useState } from 'react';
+import "./styles.css";
 import {
-    Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+    
   } from 'reactstrap';
   
   const Header = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
+    
   
-    const toggle = () => setIsOpen(!isOpen);
+    
   
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">PARENTS SOCIAL</NavbarBrand>
+      <div className="header">
+        <Navbar color="" light expand="lg">
+          <NavbarBrand className="navbarBrand" href="/home"><h1>PARENTS SOCIAL</h1></NavbarBrand>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/playDay/">Play-day</NavLink>
+                <NavLink href="/playDay">Play-day</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/playDay/">Daycare</NavLink>
+                <NavLink href="/daycare">Daycare</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/playDay/">Interview-Prep</NavLink>
+                <NavLink href="/interviewPrep">Interview-Prep</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/interviewClothes">Interview Clothing</NavLink>

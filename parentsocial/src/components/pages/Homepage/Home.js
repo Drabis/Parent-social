@@ -7,7 +7,7 @@ import PostCard from "../../PostCard/PostCard";
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <Header />
             <PostCard />
             <Footer />
