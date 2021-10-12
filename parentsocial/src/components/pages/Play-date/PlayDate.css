@@ -1,0 +1,25 @@
+.playDateCard{
+    display: block;
+    margin: auto;
+    
+    padding: 25px;
+    /* width: 70%; */
+    width: 300px;
+    box-shadow: 3px 3px grey, -1em 0 .4em rgb(141, 141, 106);
+    border-radius: 15px 2px 15px 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cardContainer{
+    margin-left: 40%;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+}
+.cardBtn{
+    background-color: turquoise;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border:transparent;
+}
