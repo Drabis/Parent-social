@@ -7,7 +7,7 @@ html{
     height: 80vh;
 
 }
-.btn{
+.container .btn{
     background-color: turquoise;
   font-weight: bold;
 }

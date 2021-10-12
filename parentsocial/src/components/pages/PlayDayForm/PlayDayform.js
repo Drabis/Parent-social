@@ -10,6 +10,7 @@ const PlayDayForm = (props) => {
         <Label for="exampleEmail">Title</Label>
         <Input type="text" name="title" id="" placeholder="Enter a title" />
       </FormGroup>
+
       <FormGroup>
         <Label for="exampleText">Description</Label>
         <Input type="textarea" name="text" id="exampleText" placeholder="What are offering today 😊?"/>
