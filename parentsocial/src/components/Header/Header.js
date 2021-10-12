@@ -22,7 +22,7 @@ import {
           <NavbarBrand className="navbarBrand" href="/home"><h1>PARENTS SOCIAL</h1></NavbarBrand>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/playDay">Play-day</NavLink>
+                <NavLink href="/playDate">Play-Date</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/daycare">Daycare</NavLink>

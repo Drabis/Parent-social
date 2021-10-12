@@ -5,8 +5,10 @@ import Daycare from "./components/pages/Daycare/Daycare";
 import About from "./components/pages/About/About";
 import InterviewClothes from "./components/pages/Interview-clothes/InterviewClothes";
 import InterviewPrep from "./components/pages/Interview-prep/InterviewPrep";
-import PlayDay from "./components/pages/PlayDay/Playday";
+import PlayDay from "./components/pages/PlayDayForm/PlayDayform";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PlayDate from "./components/pages/Play-date/PlayDate";
+import PlayDayForm from "./components/pages/PlayDayForm/PlayDayform";
 
 
 function App() {
@@ -32,8 +34,11 @@ function App() {
      <Route path="/interview-prep">
        <InterviewPrep />
      </Route>
-     <Route path="/playDay">
-      <PlayDay />
+     <Route path="/playDayForm">
+      <PlayDayForm />
+     </Route>
+     <Route path="/playDate">
+      <PlayDate />
      </Route>
      <Route path="/daycare">
       <Daycare />

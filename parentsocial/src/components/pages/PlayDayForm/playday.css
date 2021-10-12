@@ -1,0 +1,13 @@
+html{
+    /* background-color: white; */
+}
+.container{
+    background-color: white;
+    margin-top: 60px;
+    height: 80vh;
+
+}
+.btn{
+    background-color: turquoise;
+  font-weight: bold;
+}
