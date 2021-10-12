@@ -1,7 +1,6 @@
 .playDateCard{
     display: block;
     margin: auto;
-    
     padding: 25px;
     /* width: 70%; */
     width: 300px;
@@ -10,16 +9,28 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.cardContainer{
-    margin-left: 40%;
-    width: 200px;
-    height: 50px;
-    border-radius: 15px;
+.cardContainer .cardBtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
 }
-.cardBtn{
+.cardContainer .cardBtn:hover {
+    background-color: black;
+  }
+/* .cardBtn{
     background-color: turquoise;
     width: 200px;
     height: 50px;
     border-radius: 15px;
     border:transparent;
-}
+} */
