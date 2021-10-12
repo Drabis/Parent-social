@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../Header/Header'
 import Footer from '../../Footer/Footer'
+import { Link } from 'react-router-dom'
 import "./PlayDate.css"
 import {
     Card, CardText, CardBody,
@@ -14,7 +15,8 @@ function PlayDate() {
 
             <div>
                 <Card className="cardContainer">
-                    <button className="cardBtn">Add new play date</button>
+                <Link to="/PlayDayform">
+                    <button className="cardBtn">Add new play date</button></Link>
                 </Card>
             </div>
             <div>
