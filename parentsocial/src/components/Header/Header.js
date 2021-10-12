@@ -13,8 +13,7 @@ import {
   
   const Header = (props) => {
     
-  
-    
+
   
     return (
       <div className="header">
@@ -28,10 +27,10 @@ import {
                 <NavLink href="/daycare">Daycare</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/interviewPrep">Interview-Prep</NavLink>
+                <NavLink href="/interview-prep">Interview-Prep</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/interviewClothes">Interview Clothing</NavLink>
+                <NavLink href="/interview-clothes">Interview Clothing</NavLink>
               </NavItem>
             </Nav>   
             <NavItem>
