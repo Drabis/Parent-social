@@ -13,19 +13,21 @@ const API = {
     submitDaycare: (post, info, userId) => {
         const daycare = {
             body: post,
-            title: info.title,
-            author: info.author,
-            description: info.description,
+            name: info.name,
+            location: info.location,
+            phone: info.phone,
+            email: info.email
             
         }
         return axios.post(`/api/daycare/submit/${userId}`, daycare)
     },
-    updateDaycare: (post, info, category, postId) => {
+    updateDaycare: (post, info, postId) => {
         const daycare = {
             body: post,
-            category: category,
-            title: info.title,
-            author: info.author,
+            name: info.name,
+            location: info.location,
+            phone: info.phone,
+            email: info.email,
             description: info.description
         }
         console.log(daycare)
