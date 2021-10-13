@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import "./home.css";
-import Header from "../../Header/Header";
-import PostCard from "../../PostCard/PostCard";
+import Header from "../../components/Header/Header";
+import PostCard from "../../components/PostCard/PostCard";
 
 
 function Home() {
