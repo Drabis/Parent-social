@@ -12,7 +12,7 @@ function Daycare() {
         <div>
             <Header />
             <Card className="cardContainer">
-                <Link to="/newDaycare">
+                <Link to="/newDaycareForm">
                     <button className="cardBtn">Add a new Daycare</button>
                 </Link>
     </Card>
