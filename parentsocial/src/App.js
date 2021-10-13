@@ -1,13 +1,15 @@
-import SignupForm from "./components/pages/SignupForm/SignupForm";
-import LoginForm from "./components/pages/LoginForm/LoginForm";
-import Homepage from "./components/pages/Homepage/Home";
-import Daycare from "./components/pages/Daycare/Daycare";
-import About from "./components/pages/About/About";
-import InterviewClothes from "./components/pages/Interview-clothes/InterviewClothes";
-import InterviewPrep from "./components/pages/Interview-prep/InterviewPrep";
+import SignupForm from "./pages/SignupForm/SignupForm";
+import LoginForm from "./pages/LoginForm/LoginForm";
+import Homepage from "./pages/Homepage/Home";
+import Daycare from "./pages/Daycare/Daycare";
+import About from "./pages/About/About";
+import InterviewClothes from "./pages/Interview-clothes/InterviewClothes";
+import InterviewPrep from "./pages/Interview-prep/InterviewPrep";
+import PlayDay from "./pages/PlayDayForm/PlayDayform";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import PlayDate from "./components/pages/Play-date/PlayDate";
-import PlayDayForm from "./components/pages/PlayDayForm/PlayDayform";
+import PlayDate from "./pages/Play-date/PlayDate";
+import PlayDayForm from "./pages/PlayDayForm/PlayDayform";
+import NewDaycareForm from "./pages/NewDaycare/NewDaycareForm";
 
 
 function App() {
@@ -41,6 +43,9 @@ function App() {
      </Route>
      <Route path="/daycare">
       <Daycare />
+     </Route>
+     <Route path="/newDaycareForm">
+      <NewDaycareForm />
      </Route>
     
     </Router>

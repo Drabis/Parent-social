@@ -1,5 +1,5 @@
 import React from 'react'
-import Daycare from "../pages/Daycare/Daycare";
+import Daycare from "../../pages/Daycare/Daycare";
 import { useState } from 'react';
 import "./styles.css";
 import {
