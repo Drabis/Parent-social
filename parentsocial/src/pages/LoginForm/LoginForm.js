@@ -8,7 +8,6 @@ class LoginForm extends React.Component{
   render(){
     return(
       <div id="loginform">
-        <h2>-></h2>
         <FormHeader title="Login" />
         <Form />
         {/* <OtherMethods /> */}
