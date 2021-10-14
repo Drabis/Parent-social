@@ -26,6 +26,7 @@ function Daycare() {
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Location:</CardSubtitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Phone:</CardSubtitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Email:</CardSubtitle>
+                <CardSubtitle tag="h6" className="mb-2 text-muted">Description:</CardSubtitle>
                 </CardBody>
         </Card>
             <Footer />
