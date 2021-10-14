@@ -3,7 +3,7 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import {
-    Card, CardText, CardBody,
+    Card, CardBody,
     CardTitle, CardSubtitle,
   } from 'reactstrap';
 
@@ -15,7 +15,7 @@ function Daycare() {
                 <Link to="/newDaycareForm">
                     <button className="cardBtn">Add a new Daycare</button>
                 </Link>
-    </Card>
+            </Card>
             
            
         <Card className="playDateCard">
