@@ -22,6 +22,23 @@ const createDayCare = async (name, address, phone, email, description) => {
             })
 };
 
+const createPlayDate = async (name, description) => {
+    await fetch(url, '/daycare', 
+    {method : "POST",
+     header : {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            name : name,
+            description : description
+        })}).then(({res}) => {
+            let data = res.json();
+            console.log(data)
+            return data;
+        }).catch(err => {
+            console.log(err);
+            return err;
+        })
+};
+
 // const API = {
 //     signUprUser: input => {
 //         return axios.post("/api/users/signup", input)
@@ -62,4 +79,4 @@ const createDayCare = async (name, address, phone, email, description) => {
 //     }
     
 // }
-export { createDayCare, };
+export { createDayCare, createPlayDate, };
