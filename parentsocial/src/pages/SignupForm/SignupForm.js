@@ -8,9 +8,10 @@ class SignupForm extends React.Component{
   render(){
     return(
       <div id="signupform">
+        <h2>-></h2>
         <FormHeader title="Sign Up" />
         <Form />
-        <OtherMethods />
+        {/* <OtherMethods /> */}
       </div>
     )
   }
