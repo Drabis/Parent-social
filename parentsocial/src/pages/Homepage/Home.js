@@ -10,7 +10,7 @@ function Home() {
         <div className="home">
             <Header />
             <PostCard />
-            <Footer />
+         
         </div>
     )
 }

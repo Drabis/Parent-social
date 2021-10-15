@@ -139,3 +139,7 @@ html{
    padding-top: 2rem;
    margin-top: 1.5rem;
 }
+h1{
+  font-weight:bolder;
+ font-family: 'Akronim', cursive;
+}
