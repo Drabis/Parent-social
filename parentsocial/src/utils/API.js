@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 
 const url = 'localhost:8080';
 
@@ -22,14 +22,16 @@ const createDayCare = async (name, address, phone, email, description) => {
             })
 };
 
-const createPlayDate = async (name, description) => {
-    await fetch(url, '/daycare', 
+const createPlayDate = async (name, description, time) => {
+    await fetch('http://localhost:8080/playDate', 
     {method : "POST",
-     header : {'Content-Type':'application/json'},
+     headers : {'Content-Type':'application/json'},
         body: JSON.stringify({
-            name : name,
+            title : name,
+            event_time : time,
             description : description
-        })}).then(({res}) => {
+        })})
+        .then(({res}) => {
             let data = res.json();
             console.log(data)
             return data;
@@ -39,6 +41,19 @@ const createPlayDate = async (name, description) => {
         })
 };
 
+const getPlayDate = async () => {
+    await axios.get('http://localhost:8080/playDate'
+    ,{ headers : {'Content-Type' : 'application/json'}})
+    .then(( res ) => {
+        
+        console.log(res);
+        console.log(res.data);
+        return res.data;
+    }).catch((err) => {
+        console.log(err);
+    })
+    
+};
 // const API = {
 //     signUprUser: input => {
 //         return axios.post("/api/users/signup", input)
@@ -79,4 +94,4 @@ const createPlayDate = async (name, description) => {
 //     }
     
 // }
-export { createDayCare, createPlayDate, };
+export { createDayCare, createPlayDate, getPlayDate };

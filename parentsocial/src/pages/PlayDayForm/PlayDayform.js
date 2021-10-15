@@ -1,19 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import "./playday.css"
 import { SyntheticEvent } from "synthetic-event";
-import axios from 'axios';
+// import axios from 'axios';
 import { createPlayDate } from '../../utils/API';
+import router from 'router';
+import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 
 
 
 const PlayDayForm = (props) => {
 
   const [title, setTitle] = useState('');
+  const [eventTime, setEventTime] = useState('');
   const [description, setDescription] = useState('');
 
   const submit = () => {
-    createPlayDate(title, description);
+    createPlayDate(title, description, eventTime);
+    // useHistory.push("http://localhost:3000/playdate");
   };
 
 
@@ -32,7 +37,9 @@ const PlayDayForm = (props) => {
          onChange={(e) => {setDescription(e.target.value)}}
         />
       </FormGroup>
-      <Button className="btn">Submit</Button>
+      <Link path="http://localhost:3000/playdate">
+         <Button className="btn" onClick={submit}>Submit</Button>
+      </Link>
     </Form>
     </div>
   );
