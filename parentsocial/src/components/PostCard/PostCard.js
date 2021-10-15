@@ -20,7 +20,7 @@ import {
           <CardImg src={Image} alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h5">Play-Date</CardTitle>
-            <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
+            <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
             <CardText> Our focus offers specialized programs that provide care for your children when juggling work-life with child-care. Offering a joyful moment for your children </CardText>
             <Button>View</Button>
           </CardBody>
@@ -29,7 +29,7 @@ import {
           <CardImg src={DaycareImg} alt="Card image cap" />
           <CardBody className="cardGroup">
             <CardTitle tag="h5">Daycare</CardTitle>
-            <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
+            <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
             <CardText>Our teachers are all experienced and dedicated professionals who love children. What makes us special? We aim to educate and grow the children of today by offering the best class.</CardText>
             <Button>View</Button>
           </CardBody>
@@ -47,7 +47,7 @@ import {
     <CardImg src={InterviewPrepImg} alt="Card image cap" />
     <CardBody className="cardGroup">
         <CardTitle tag="h5">Interview- Prep</CardTitle>
-        <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
+        <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
         <CardText>Still confused about what question the interviewer may ask or worry about saying the wrong thing? Here you will have all the best content to be prepared for your interview day. </CardText>
         <Button>View</Button>
     </CardBody>
@@ -57,7 +57,7 @@ import {
     <CardImg src={InterviewClothesImg} alt="Card image cap" />
     <CardBody className="cardGroup">
         <CardTitle tag="h5">Interview clothing</CardTitle>
-        <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
+        <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
         <CardText>Interview day is around the corner and you still don't know what to wear, don't worry we got you covered. Visit this page to see all the recommendations we got for you.</CardText>
         <Button>View</Button>
     </CardBody>
