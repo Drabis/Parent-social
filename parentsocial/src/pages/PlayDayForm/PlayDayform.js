@@ -2,18 +2,30 @@ import { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import "./playday.css"
 import { SyntheticEvent } from "synthetic-event";
-import axios from 'axios';
+// import axios from 'axios';
 import { createPlayDate } from '../../utils/API';
+import cors from 'cors';
 
 
 
 const PlayDayForm = (props) => {
 
   const [title, setTitle] = useState('');
+  const [eventTime, setEventTime] = useState('');
   const [description, setDescription] = useState('');
 
-  const submit = () => {
-    createPlayDate(title, description);
+  const submit = async () => {
+    createPlayDate(title, description, eventTime);
+    // await fetch('localhost:8080/playDate', 
+    // {method : "POST",
+    //  header : {'Content-Type':'application/json'},
+    //  mode : "cors",
+    //     body: JSON.stringify({
+    //         title : title,
+    //         event_time : eventTime,
+    //         description : description
+    //     })})
+
   };
 
 
@@ -32,7 +44,7 @@ const PlayDayForm = (props) => {
          onChange={(e) => {setDescription(e.target.value)}}
         />
       </FormGroup>
-      <Button className="btn">Submit</Button>
+      <Button className="btn" onClick={submit}>Submit</Button>
     </Form>
     </div>
   );
