@@ -8,6 +8,7 @@
  font-family: 'Akronim', cursive;
 }
 
+
 .mr-auto{
     flex: end;
 }
@@ -20,3 +21,4 @@ body{
 html{
   font-size: 100%;
 }
+
