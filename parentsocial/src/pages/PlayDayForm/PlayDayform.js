@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import "./playday.css"
 import { SyntheticEvent } from "synthetic-event";
 // import axios from 'axios';
 import { createPlayDate } from '../../utils/API';
-import cors from 'cors';
+import router from 'router';
+import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,18 +16,9 @@ const PlayDayForm = (props) => {
   const [eventTime, setEventTime] = useState('');
   const [description, setDescription] = useState('');
 
-  const submit = async () => {
+  const submit = () => {
     createPlayDate(title, description, eventTime);
-    // await fetch('localhost:8080/playDate', 
-    // {method : "POST",
-    //  header : {'Content-Type':'application/json'},
-    //  mode : "cors",
-    //     body: JSON.stringify({
-    //         title : title,
-    //         event_time : eventTime,
-    //         description : description
-    //     })})
-
+    // useHistory.push("http://localhost:3000/playdate");
   };
 
 
@@ -44,7 +37,9 @@ const PlayDayForm = (props) => {
          onChange={(e) => {setDescription(e.target.value)}}
         />
       </FormGroup>
-      <Button className="btn" onClick={submit}>Submit</Button>
+      <Link path="http://localhost:3000/playdate">
+         <Button className="btn" onClick={submit}>Submit</Button>
+      </Link>
     </Form>
     </div>
   );

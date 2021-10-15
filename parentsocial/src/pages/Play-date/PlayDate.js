@@ -68,19 +68,18 @@ function PlayDate() {
     </Card>
     {data.map(({id, title, description, event_time}) => (
             <div key = {id}>
-                <span>{title}</span>
-            </div>
-        ))}
-           
-        <Card className="playDateCard">
+            <Card className="playDateCard">
                 
                 <CardBody>
-                <CardTitle tag="h5">Title</CardTitle>
+                <CardTitle tag="h5">{title}</CardTitle>
                 
-                <CardSubtitle tag="h6" className="mb-2 text-muted">Description</CardSubtitle>
-                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
+                <CardText>{description}</CardText>
                 </CardBody>
         </Card>
+            
+            </div>
+        ))}
             
 
             <Footer />
