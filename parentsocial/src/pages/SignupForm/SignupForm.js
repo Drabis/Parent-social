@@ -10,7 +10,7 @@ class SignupForm extends React.Component{
       <div id="signupform">
         <FormHeader title="Sign Up" />
         <Form />
-        {/* <OtherMethods /> */}
+        <OtherMethods />
       </div>
     )
   }

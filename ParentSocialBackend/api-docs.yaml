@@ -1,0 +1,232 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /playDate/{id}:
+    get:
+      tags:
+      - Play Date
+      summary: Get Play Date By ID
+      operationId: get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Get Day Care Object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayDate'
+    put:
+      tags:
+      - Play Date
+      summary: Create a Play Date
+      operationId: update
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        description: JSON object with Play Date model
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlayDate'
+        required: true
+      responses:
+        "200":
+          description: "Play Date, where create object"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayDate'
+    delete:
+      tags:
+      - Play Date
+      summary: Delete Play Date By ID
+      operationId: delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Deleted Play Date Object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayDate'
+  /dayCare/{id}:
+    get:
+      tags:
+      - Day Care
+      summary: Get Day Care By ID
+      operationId: get_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Get Day Care Object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DayCare'
+    put:
+      tags:
+      - Day Care
+      summary: Update Day Care
+      operationId: update_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        description: JSON object with Day Care model
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DayCare'
+        required: true
+      responses:
+        "200":
+          description: "DayCare, where updated object"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DayCare'
+    delete:
+      tags:
+      - Day Care
+      summary: Delete Day Care By ID
+      operationId: delete_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Deleted Day Care Object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DayCare'
+  /playDate:
+    get:
+      tags:
+      - Play Date
+      summary: Get All Play Date
+      operationId: all
+      responses:
+        "200":
+          description: Get All Play Date List
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayDate'
+    post:
+      tags:
+      - Play Date
+      summary: Create a Play Date
+      operationId: create
+      requestBody:
+        description: JSON object with Play Date model
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlayDate'
+        required: true
+      responses:
+        "200":
+          description: "Play Date, where create object"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayDate'
+  /dayCare:
+    get:
+      tags:
+      - Day Care
+      summary: Get All Day Care
+      operationId: all_1
+      responses:
+        "200":
+          description: Get All Day Care List
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DayCare'
+    post:
+      tags:
+      - Day Care
+      summary: Create Day Care
+      operationId: create_1
+      requestBody:
+        description: JSON object with Day Care model
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DayCare'
+        required: true
+      responses:
+        "200":
+          description: "DayCare, where create object"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DayCare'
+components:
+  schemas:
+    PlayDate:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        event_name:
+          type: string
+        location:
+          type: string
+        event_time:
+          type: string
+          format: date-time
+    DayCare:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        daycare_name:
+          type: string
+        total_number:
+          type: integer
+          format: int32
+        address:
+          type: string
+        phone_number:
+          type: string

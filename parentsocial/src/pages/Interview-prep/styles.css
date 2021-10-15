@@ -1,0 +1,16 @@
+
+
+table {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+}
+
+tr {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+
