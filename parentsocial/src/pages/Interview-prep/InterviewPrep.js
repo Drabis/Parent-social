@@ -42,6 +42,9 @@ function InterviewPrep() {
                 <h2 className="title"> Interview for Accounting</h2>
                 <li><Link to={{pathname:"https://youtu.be/UQa46oDYMuw"}}target="_blank">Interview prep</Link></li>
             </td> */}
+            <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VP1WBDB6lAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <Footer />
         </div>
     )
