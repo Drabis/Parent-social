@@ -1,9 +1,10 @@
 import React from 'react'
-import Image from "../../assets/Images/swing.jpg";
+import Image from "../../assets/Images/water.jpg";
 import DaycareImg from "../../assets/Images/painting.jpg";
 import InterviewClothesImg from "../../assets/Images/interClothes.jpg"
 import InterviewPrepImg from "../../assets/Images/interPrep.jpg";
 import "./postCard.css"
+import {Link} from 'react-router-dom'
 import {
     Card, Button, CardImg, CardTitle, CardText, CardGroup,
     CardSubtitle, CardBody,Row, Col 
@@ -12,11 +13,11 @@ import {
 
   const PostCard = (props) => {
     return (
-     <>
+     <div>
         <Row className="row">
-        <Col sm="6">
-      <CardGroup className="cardGroup">
-        <Card className="card">
+        <Col >
+      <CardGroup className="cards">
+        <Card  className="card">
           <CardImg src={Image} alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h5">Play-Date</CardTitle>
@@ -25,6 +26,7 @@ import {
             <Button href="/daycare">View</Button>
           </CardBody>
         </Card>
+        
         <Card className="card">
           <CardImg src={DaycareImg} alt="Card image cap" />
           <CardBody className="cardGroup">
@@ -43,8 +45,8 @@ import {
 
 
 <Row className="row">
-    <Col sm="6">
-    <CardGroup >
+    <Col>
+    <CardGroup className='cards' >
     <Card className="card">
     <CardImg src={InterviewPrepImg} alt="Card image cap" />
     <CardBody className="cardGroup">
@@ -68,7 +70,7 @@ import {
     </Col>
 </Row>
   
-    </> 
+    </div> 
     );
   };
 

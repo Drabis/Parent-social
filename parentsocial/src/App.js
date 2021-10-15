@@ -20,9 +20,21 @@ function App() {
     <Route path="/home">
       <Homepage />
     </Route>
+
     <Route path="/about">
       <About />
     </Route>
+
+
+    <Route path="/about">
+      <About/>
+    </Route>
+
+    {/* <Route path="/about">
+      <About />
+    </Route> */}
+
+
     <Route path="/signup">
       <SignupForm />
     </Route>
