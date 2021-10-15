@@ -21,7 +21,7 @@ function App() {
       <Homepage />
     </Route>
     <Route path="/about">
-      <About />
+      <About/>
     </Route>
     <Route path="/signup">
       <SignupForm />
