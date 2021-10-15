@@ -22,6 +22,11 @@ function App() {
     </Route>
 
     <Route path="/about">
+      <About />
+    </Route>
+
+
+    <Route path="/about">
       <About/>
     </Route>
 
@@ -29,15 +34,16 @@ function App() {
       <About />
     </Route> */}
 
+
     <Route path="/signup">
       <SignupForm />
     </Route>
     <Route path="/login">
       <LoginForm />
     </Route>
-    {/* <Route path="/interview-clothes">
+    <Route path="/interview-clothes">
        <InterviewClothes />
-     </Route> */}
+     </Route>
      <Route path="/interview-prep">
        <InterviewPrep />
      </Route>
