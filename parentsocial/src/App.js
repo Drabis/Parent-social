@@ -20,18 +20,18 @@ function App() {
     <Route path="/home">
       <Homepage />
     </Route>
-    {/* <Route path="/about">
+    <Route path="/about">
       <About />
-    </Route> */}
+    </Route>
     <Route path="/signup">
       <SignupForm />
     </Route>
     <Route path="/login">
       <LoginForm />
     </Route>
-    {/* <Route path="/interview-clothes">
+    <Route path="/interview-clothes">
        <InterviewClothes />
-     </Route> */}
+     </Route>
      <Route path="/interview-prep">
        <InterviewPrep />
      </Route>
