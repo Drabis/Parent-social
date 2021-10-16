@@ -37,9 +37,8 @@ const PlayDayForm = (props) => {
          onChange={(e) => {setDescription(e.target.value)}}
         />
       </FormGroup>
-      <Link path="http://localhost:3000/playdate">
-         <Button className="btn" onClick={submit}>Submit</Button>
-      </Link>
+
+         <Button href="/playdate" className="btn" onClick={submit}>Submit</Button>
     </Form>
     </div>
   );
