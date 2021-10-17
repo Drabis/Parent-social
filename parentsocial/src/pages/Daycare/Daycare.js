@@ -14,7 +14,7 @@ function Daycare() {
 
 
     React.useEffect(() => {
-        axios.get('http://localhost:8080/daycares').then((response) => { 
+        axios.get('http://localhost:8080/daycare').then((response) => { 
    
    
         const testData = [];

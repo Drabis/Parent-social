@@ -114,13 +114,13 @@ public class DayCareController {
 
 
 
-    @GetMapping("/daycares")
+    @GetMapping("/daycare")
     @ResponseStatus(value = HttpStatus.OK)
     public List<DayCare> getAllDaycare() {
         return dayCareList;
     }
 
-    @PostMapping("/daycares")
+    @PostMapping("/daycare")
     @ResponseStatus(value = HttpStatus.CREATED)
     public DayCare CreateDaycare(@RequestBody @Valid DayCare dayCare) {
         dayCare.setId(idCounter++);
@@ -145,7 +145,7 @@ public class DayCareController {
         }
     }
 
-    @DeleteMapping("/daycares/{id}")
+    @DeleteMapping("/daycare/{id}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void deleteDayCareById(@PathVariable int id) {
         int index = -1;
@@ -162,7 +162,7 @@ public class DayCareController {
         }
     }
 
-    @GetMapping("/daycares/{id}")
+    @GetMapping("/daycare/{id}")
     @ResponseStatus(value = HttpStatus.OK)
     public DayCare getDayCareById(@PathVariable Integer id) {
         DayCare foundDayCare = null;

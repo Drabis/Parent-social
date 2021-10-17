@@ -71,7 +71,7 @@ function PlayDate() {
             <Card className="playDateCard">
                 
                 <CardBody>
-                <CardTitle tag="h5">{title}</CardTitle>
+                <CardTitle tag="h4">{title}</CardTitle>
                 
                 <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
                 <CardText>{description}</CardText>
