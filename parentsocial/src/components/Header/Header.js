@@ -37,7 +37,7 @@ import {
               </NavItem>
             </Nav>   
             <NavItem>
-                <NavLink className="" href="/home">Logout</NavLink>
+                <NavLink className="" href="/">Logout</NavLink>
               </NavItem>
         </Navbar>
       </div>

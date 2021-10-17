@@ -18,8 +18,8 @@ function App() {
     
     <Router>
 
-    <Route path="/about">
-      <About />
+    <Route exact path="/">
+      < About/>
     </Route>
 
     <Route path="/home">
