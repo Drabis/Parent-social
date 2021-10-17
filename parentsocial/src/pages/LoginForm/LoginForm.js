@@ -7,11 +7,17 @@ import "./Login.css";
 class LoginForm extends React.Component{
   render(){
     return(
+      <>
+      <div>
+        <h1>PRENT SOCIAL</h1>
+      <h2>Welcome to Parents Social </h2>
+      </div>
       <div id="loginform">
         <FormHeader title="Login" />
         <Form />
         {/* <OtherMethods /> */}
       </div>
+      </>
     )
   }
 }
@@ -25,6 +31,8 @@ const Form = props => (
    <div>
      <FormInput description="Username" placeholder="Enter your username" type="text" />
      <FormInput description="Password" placeholder="Enter your password" type="password"/>
+     <br/>
+     <p><a href="/signup">Are you a new memeber?</a></p>
      <FormButton title="Log in"/>
    </div>
 );
@@ -41,6 +49,7 @@ const FormInput = props => (
     <input type={props.type} placeholder={props.placeholder}/>
   </div>  
 );
+
 
 const OtherMethods = props => (
   <div id="alternativeLogin">

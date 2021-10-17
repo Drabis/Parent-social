@@ -36,7 +36,10 @@ const PlayDayForm = (props) => {
         <Input type="textarea" name="text" id="exampleText" placeholder="What are offering today 😊?"
          onChange={(e) => {setDescription(e.target.value)}}
         />
+
       </FormGroup>
+
+ 
 
          <Button href="/playdate" className="btn" onClick={submit}>Submit</Button>
     </Form>
