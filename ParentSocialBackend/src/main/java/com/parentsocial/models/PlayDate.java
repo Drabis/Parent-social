@@ -17,8 +17,7 @@ public class PlayDate {
     private String title;
     private String description;
 
-//    @JsonProperty("event_time")
-//    @Column(name = "event_time")
+
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     public Date event_time;
 
