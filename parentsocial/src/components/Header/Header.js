@@ -21,7 +21,7 @@ import {
           <NavbarBrand className="navbarBrand" href="/home"><h1>PARENTS SOCIAL</h1></NavbarBrand>
             <Nav className="mr-auto" navbar>
             <NavItem>
-                <NavLink href="/about">About-Us</NavLink>
+                <NavLink href="/">About-Us</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/playDate">Play-Date</NavLink>
@@ -35,11 +35,14 @@ import {
               <NavItem>
                 <NavLink href="/interview-clothes">Interview Clothing</NavLink>
               </NavItem>
-            </Nav>   
-            <NavItem>
-                <NavLink className="" href="/">Logout</NavLink>
+            </Nav>  
+            <Nav>
+            <NavItem className="logout">
+                <NavLink href="/">Logout</NavLink>
               </NavItem>
+              </Nav>
         </Navbar>
+        
       </div>
     );
   }
