@@ -76,7 +76,7 @@ function PlayDate() {
                 <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
                 <CardText>{description}</CardText>
                 </CardBody>
-        </Card>
+            </Card>
             
             </div>
         ))}
