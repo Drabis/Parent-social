@@ -9,20 +9,29 @@ public class DayCare {
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
      private Integer id;
-    private String daycare_name;
 
+    private String daycare_name;
     private String address;
     private String email;
     private String phone_number;
     private String description;
 
 
-    public DayCare(String daycare_name, String address, String email, String phone_number, String description, int id) {
+    public DayCare( Integer id,String daycare_name, String address, String email, String phone_number, String description) {
+        this.id = id;
         this.daycare_name = daycare_name;
         this.address = address;
         this.email = email;
         this.phone_number = phone_number;
         this.description = description;
+
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -66,13 +75,7 @@ public class DayCare {
         this.description = description;
     }
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -90,12 +93,12 @@ public class DayCare {
     @Override
     public String toString() {
         return "DayCare{" +
-                "daycare_name='" + daycare_name + '\'' +
+                "id=" + id +
+                ", daycare_name='" + daycare_name + '\'' +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", phone_number='" + phone_number + '\'' +
                 ", description='" + description + '\'' +
-                ", id='" + id + '\'' +
                 '}';
     }
 }

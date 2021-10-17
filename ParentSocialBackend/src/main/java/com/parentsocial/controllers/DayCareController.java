@@ -2,6 +2,14 @@ package com.parentsocial.controllers;
 
 
 import com.parentsocial.models.DayCare;
+import com.parentsocial.models.PlayDate;
+import com.parentsocial.repository.DayCareRepository;
+import com.parentsocial.repository.PlayDateRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -9,8 +17,11 @@ import java.sql.Array;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.*;
+
+import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 
 @RestController
@@ -18,9 +29,79 @@ import javax.validation.Valid;
 public class DayCareController {
 
 
-    private static int idCounter = 1;
+    private final DayCareRepository repository;
 
-    private static List<DayCare> dayCareList = new ArrayList<>(Arrays.asList(
+    DayCareController(DayCareRepository repo) {
+        this.repository = repo;
+    }
+
+    @GetMapping("/daycare")
+    @ResponseBody
+    @Operation(summary = "Get All Daycare", tags = { "Daycare" })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Get All Daycare List", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
+    List<DayCare> all() {
+        return repository.findAll();
+    }
+
+    @PostMapping("/Daycare")
+    @ResponseBody
+    @Operation(summary = "Create Daycare", tags = { "Daycare" })
+    @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object with Daycare model", required = true, content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Daycare, where create object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) }),
+    })
+   DayCare create(@RequestBody DayCare dayCare) {
+        return repository.save(dayCare);
+    }
+
+    @ResponseBody
+    @GetMapping("/Daycare/{id}")
+    @Operation(summary = "Get Daycare By ID", tags = { "Daycare" })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Get Daycare Object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
+    public Optional<DayCare> get(@PathVariable Integer id) {
+        return this.repository.findById(id);
+    }
+
+    @PutMapping("/Daycare/{id}")
+    @ResponseBody
+    @Operation(summary = "Create a Daycare", tags = { "Daycare" })
+    @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object with Daycare model", required = true, content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Daycare, where create object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation =DayCare.class)) }),
+    })
+    public DayCare update( @PathVariable Integer id, @RequestBody DayCare daycare) {
+       DayCare model = this.repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(id + ""));
+
+
+        return this.repository.save(model);
+    }
+
+    @DeleteMapping("/Daycare/{id}")
+    @Operation(summary = "Delete Daycare By ID", tags = { "Daycare" })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Deleted Daycare Object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
+    public Optional<DayCare> delete(@PathVariable("id") Integer id) {
+        Optional<DayCare> model = this.repository.findById(id);
+        this.repository.deleteById(id);
+
+        return model;
+    }
+}
+
+
+
+
+
+
+
+
+
+//private static int idCounter = 1;
+
+    /*private static List<DayCare> dayCareList = new ArrayList<>(Arrays.asList(
 
 
         new DayCare("ret", "Pet Sounds", "123 Main Street Nashville TN", "abs@email.com", "res",  idCounter++),
@@ -93,75 +174,5 @@ public class DayCareController {
             }
         }
         return foundDayCare;
-    }
-}
-
-
-
-//
-//    private  DayCareRepository repository;
-//
-//    DayCareController(DayCareRepository repo) {
-//        this.repository = repo;
-//    }
-//
-//    @GetMapping("/dayCare")
-//    @ResponseBody
-//    @Operation(summary = "Get All Day Care", tags = { "Day Care" })
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Get All Day Care List", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
-//    List<DayCare> all() {
-//        return repository.findAll();
-//    }
-//
-//    @ResponseBody
-//    @PostMapping("/dayCare")
-//    @Operation(summary = "Create Day Care", tags = { "Day Care" })
-//    @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object with Day Care model", required = true, content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "DayCare, where create object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) }),
-//            })
-//    DayCare create(@RequestBody DayCare daycare) {
-//        return repository.save(daycare);
-//    }
-//
-//    @ResponseBody
-//    @GetMapping("/dayCare/{id}")
-//    @Operation(summary = "Get Day Care By ID", tags = { "Day Care" })
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Get Day Care Object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
-//    public Optional<DayCare> get(@PathVariable Long id) {
-//        return this.repository.findById(id);
-//    }
-//
-//    @PutMapping("/dayCare/{id}")
-//    @Operation(summary = "Update Day Care", tags = { "Day Care" })
-//    @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object with Day Care model", required = true, content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "DayCare, where updated object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) }),
-//    })
-//    public DayCare update( @PathVariable Long id, @RequestBody DayCare daycare) {
-//        DayCare model = this.repository.findById(id)
-//                .orElseThrow(() -> new EntityNotFoundException(id + ""));
-//
-//        model.daycare_name = daycare.daycare_name;
-//        model.description = daycare.description;
-//        model.address = daycare.address;
-//        model.phone_number = daycare.phone_number;
-//        model.email = daycare.email;
-//
-//        return this.repository.save(model);
-//    }
-//
-//    @DeleteMapping("/dayCare/{id}")
-//    @Operation(summary = "Delete Day Care By ID", tags = { "Day Care" })
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Deleted Day Care Object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
-//    public Optional<DayCare> delete(@PathVariable("id") Long id) {
-//        Optional<DayCare> model = this.repository.findById(id);
-//        this.repository.deleteById(id);
-//
-//        return model;
-//    }
-//
+    }*/
 //}
