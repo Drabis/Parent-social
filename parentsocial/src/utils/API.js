@@ -2,8 +2,20 @@ import axios from "axios";
 
 const url = 'localhost:8080';
 
+const API = {
+    signupUser: input => {
+        return axios.post(`${url}/user/`, input)
+    },
+    loginUser: input => {
+        return axios.post(`${url}/user/`, input)
+    },
+}
+
+
+
+
 const createDayCare = async (name, address, phone, email, description) => {
-        await fetch(url, '/daycare', 
+        await fetch('http://localhost:8080/daycare', 
         {method : "POST",
          header : {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -20,6 +32,20 @@ const createDayCare = async (name, address, phone, email, description) => {
                 console.log(err);
                 return err;
             })
+};
+
+const getDayCare = async () => {
+    await axios.get('http://localhost:8080/daycare'
+    ,{ headers : {'Content-Type' : 'application/json'}})
+    .then(( res ) => {
+        
+        console.log(res);
+        console.log(res.data);
+        return res.data;
+    }).catch((err) => {
+        console.log(err);
+    })
+    
 };
 
 const createPlayDate = async (name, description, time) => {
@@ -94,4 +120,6 @@ const getPlayDate = async () => {
 //     }
     
 // }
-export { createDayCare, createPlayDate, getPlayDate };
+
+export { createDayCare, createPlayDate, getPlayDate, getDayCare};
+export default API;

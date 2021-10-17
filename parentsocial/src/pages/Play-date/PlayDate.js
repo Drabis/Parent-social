@@ -37,26 +37,6 @@ function PlayDate() {
      })
  }, []);
 
-    //     console.log(res);
-    //     console.log(res.data);
-    //     return res.data;
-    // }).catch((err) => {
-    //     console.log(err);
-    // })
-    
-    // // handling useEffect
-    // .then( (data) => {
-    //         console.log(data);
-    //         setData( data.data || "No user data found." );
-    //     })
-    // }, [])
-
-    // useEffect(() =>{
-    //     getPlayDate().then( (data) => {
-    //         console.log(data);
-    //         setData( data || "No user data found." );
-    //     })
-    // }, [])
 
     return (
         <div>

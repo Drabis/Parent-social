@@ -27,6 +27,9 @@ public class DayCare {
 
     }
 
+    public DayCare() {
+    }
+
     public Integer getId() {
         return id;
     }

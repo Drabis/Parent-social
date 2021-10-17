@@ -37,26 +37,26 @@ public class DayCareController {
 
     @GetMapping("/daycare")
     @ResponseBody
-    @Operation(summary = "Get All Daycare", tags = { "Daycare" })
+    @Operation(summary = "Get All daycare", tags = { "daycare" })
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Get All Daycare List", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
     List<DayCare> all() {
         return repository.findAll();
     }
 
-    @PostMapping("/Daycare")
+    @PostMapping("/daycare")
     @ResponseBody
-    @Operation(summary = "Create Daycare", tags = { "Daycare" })
+    @Operation(summary = "Create daycare", tags = { "daycare" })
     @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object with Daycare model", required = true, content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Daycare, where create object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) }),
+            @ApiResponse(responseCode = "200", description = "daycare, where create object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) }),
     })
    DayCare create(@RequestBody DayCare dayCare) {
         return repository.save(dayCare);
     }
 
     @ResponseBody
-    @GetMapping("/Daycare/{id}")
+    @GetMapping("/daycare/{id}")
     @Operation(summary = "Get Daycare By ID", tags = { "Daycare" })
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Get Daycare Object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
@@ -64,7 +64,7 @@ public class DayCareController {
         return this.repository.findById(id);
     }
 
-    @PutMapping("/Daycare/{id}")
+    @PutMapping("/daycare/{id}")
     @ResponseBody
     @Operation(summary = "Create a Daycare", tags = { "Daycare" })
     @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object with Daycare model", required = true, content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })
@@ -79,7 +79,7 @@ public class DayCareController {
         return this.repository.save(model);
     }
 
-    @DeleteMapping("/Daycare/{id}")
+    @DeleteMapping("/daycare/{id}")
     @Operation(summary = "Delete Daycare By ID", tags = { "Daycare" })
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Deleted Daycare Object", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = DayCare.class)) })})
