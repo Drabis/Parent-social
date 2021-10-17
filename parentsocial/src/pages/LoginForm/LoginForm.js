@@ -11,6 +11,7 @@ export default function SigninPage(props) {
   const [errorMessage, setErrorMessage] = useState(false);
   
 
+
   const handleInputChange = (e) => {
     setFormInput({ ...formInput, [e.target.name]: e.target.value });
     const targetName = e.target.name;
@@ -58,6 +59,7 @@ export default function SigninPage(props) {
           REGISTER
         </Link>
       </button>
+
     </div>
   );
 }
