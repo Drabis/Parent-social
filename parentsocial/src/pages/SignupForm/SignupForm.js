@@ -26,7 +26,7 @@ const Form = props => (
      <FormInput description="Username" placeholder="Enter your username" type="text" />
      <FormInput description="Password" placeholder="Enter your password" type="password"/>
      <br/>
-     <p><a href="/login">Are you already a memeber?</a></p>
+    
      <FormButton title="Sign Up"/>
    </div>
 );
