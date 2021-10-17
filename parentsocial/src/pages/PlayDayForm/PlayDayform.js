@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 
 
 const PlayDayForm = (props) => {
+  
+  const history = useHistory();
 
   const [title, setTitle] = useState('');
   const [eventTime, setEventTime] = useState('');
@@ -18,7 +20,7 @@ const PlayDayForm = (props) => {
 
   const submit = () => {
     createPlayDate(title, description, eventTime);
-    // useHistory.push("http://localhost:3000/playdate");
+    // history.push("/playdate");
   };
 
 

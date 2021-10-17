@@ -1,18 +1,17 @@
 
 import API from "../../utils/API"
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { SyntheticEvent } from "synthetic-event";
+
 import { createDayCare } from '../../utils/API';
+
 
 
 const NewDaycareForm = (props) => {
 
-  // let { postId } = useParams();
-  // const history = useHistory();
-  // const [daycare, setDaycare] = useState({});
-  // const [daycareInfo, setDaycareInfo] = useState({});
+  const history = useHistory();
+
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
@@ -21,30 +20,11 @@ const NewDaycareForm = (props) => {
   
  
 
-  // useEffect(() => {
-  //   if (postId) {
-  //     API.getDaycareById(postId).then((response) => {
-        
-  //       setDaycareInfo({
-  //         name: response.data.name,
-  //         location: response.data.location,
-  //         phone: response.data.phone,
-  //         email: response.date.email,
-  //         description: response.data.description
-  //       });
-       
-  //     });
-  //   } else {
-  //     setDaycare({});
-  //     setDaycareInfo({});
-  //   }
-  // }, [postId]);
 
-  // const handleInputChange = (e) => {
-  //   setDaycareInfo({ ...daycareInfo, [e.target.name]: e.target.value });
-  // };
   const submit = () => {
     createDayCare(name, address, phone, email, description);
+
+    history.push("/daycare")
   };
 
 
