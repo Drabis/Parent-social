@@ -62,7 +62,7 @@ function PlayDate() {
         <div>
         <Header />
     <Card className="cardContainer">
-                <Link to="/PlayDayform">
+                <Link to="/PlayDayForm">
                     <button className="cardBtn">Add new play date</button>
                 </Link>
     </Card>
@@ -71,9 +71,11 @@ function PlayDate() {
             <Card className="playDateCard">
                 
                 <CardBody>
-                <CardTitle tag="h4">{title}</CardTitle>
+
+                <CardTitle tag="h3">{title}</CardTitle>
+
                 
-                <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
+                <CardSubtitle tag="h5" className="mb-2 text-muted"></CardSubtitle>
                 <CardText>{description}</CardText>
                 </CardBody>
             </Card>

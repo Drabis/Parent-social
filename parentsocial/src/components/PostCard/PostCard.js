@@ -19,11 +19,11 @@ import {
       <CardGroup className="cards">
         <Card  className="card">
           <CardImg src={Image} alt="Card image cap" />
-          <CardBody>
+          <CardBody className="cardGroup">
             <CardTitle tag="h5">Play-Date</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted"></CardSubtitle>
             <CardText> Our focus offers specialized programs that provide care for your children when juggling work-life with child-care. Offering a joyful moment for your children </CardText>
-            <Button href="/daycare">View</Button>
+            <Button href="/playDate">View</Button>
           </CardBody>
         </Card>
         

@@ -17,18 +17,16 @@ function App() {
   
     
     <Router>
-    <Route path="/home">
-      <Homepage />
-    </Route>
-
 
     <Route path="/about">
-      <About/>
+      <About />
     </Route>
 
-    {/* <Route path="/about">
-      <About />
-    </Route> */}
+    <Route path="/home">
+      <Homepage />
+
+    </Route>
+
 
 
     <Route path="/signup">
