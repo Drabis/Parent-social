@@ -20,6 +20,9 @@ import {
         <Navbar color="" light expand="lg">
           <NavbarBrand className="navbarBrand" href="/home"><h1>PARENTS SOCIAL</h1></NavbarBrand>
             <Nav className="mr-auto" navbar>
+            <NavItem>
+                <NavLink href="/about">About-Us</NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink href="/playDate">Play-Date</NavLink>
               </NavItem>
@@ -34,7 +37,7 @@ import {
               </NavItem>
             </Nav>   
             <NavItem>
-                <NavLink href="/login">Logout</NavLink>
+                <NavLink className="" href="/home">Logout</NavLink>
               </NavItem>
         </Navbar>
       </div>
