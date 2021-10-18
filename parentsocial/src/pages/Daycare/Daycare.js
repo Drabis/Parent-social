@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {
     Card, CardBody,
-    CardTitle, CardSubtitle,
+    CardTitle, CardSubtitle,CardText
   } from 'reactstrap';
 
 function Daycare() {
@@ -43,21 +43,22 @@ function Daycare() {
                 </Link>
             </Card>
 
-            {data.map(({id, name, address, phone, email, description}) => (
+            {data.map(({id, daycare_name, address, phone_number, email, description}) => (
             <div key = {id}>
            
-            <Card className="daycareCard">
+             <Card className="daycareCard">
                 <CardBody>
-                <CardTitle tag="h4">{name}</CardTitle>
+                <CardTitle tag="h4">{daycare_name}</CardTitle>
                 
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{address}:</CardSubtitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">{phone}:</CardSubtitle>
+                <CardSubtitle tag="h6" className="mb-2 text-muted">{phone_number}:</CardSubtitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{email}:</CardSubtitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{description}:</CardSubtitle>
                 </CardBody>
             </Card>
             </div>
-            ))}
+            ))} 
+            
 
             <Footer />
         

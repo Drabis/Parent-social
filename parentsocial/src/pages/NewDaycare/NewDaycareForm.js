@@ -12,9 +12,9 @@ const NewDaycareForm = (props) => {
 
   const history = useHistory();
 
-  const [name, setName] = useState('');
+  const [daycare_name, setDaycare_name] = useState('');
   const [address, setAddress] = useState('');
-  const [phone, setPhone] = useState('');
+  const [phone_number, setPhone_number] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
   
@@ -22,7 +22,7 @@ const NewDaycareForm = (props) => {
 
 
   const submit = () => {
-    createDayCare(name, address, phone, email, description);
+    createDayCare(daycare_name, address, phone_number, email, description);
 
     history.push("/daycare")
   };
@@ -34,7 +34,7 @@ const NewDaycareForm = (props) => {
       <FormGroup>
         <Label for="exampleText" >Daycare Name</Label>
         <Input type="text" name="text" id="" placeholder=" Name" 
-        onChange={(e) => {setName(e.target.value)}}/>
+        onChange={(e) => {setDaycare_name(e.target.value)}}/>
       </FormGroup>
       <FormGroup>
         <Label for="exampleText" >Daycare Address</Label>
@@ -44,7 +44,7 @@ const NewDaycareForm = (props) => {
       <FormGroup>
         <Label for="exampleText" >Daycare Phone</Label>
         <Input type="text" name="text" id="" placeholder=" Phone" 
-        onChange={(e) => {setPhone(e.target.value)}}/>
+        onChange={(e) => {setPhone_number(e.target.value)}}/>
       </FormGroup>
       <FormGroup>
         <Label for="exampleText">Daycare Email</Label>

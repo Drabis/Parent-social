@@ -11,3 +11,7 @@ html{
     background-color: turquoise;
   font-weight: bold;
 }
+.first td{
+    border-bottom: 2px solid black;
+
+}

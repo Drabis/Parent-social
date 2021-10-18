@@ -14,14 +14,14 @@ const API = {
 
 
 
-const createDayCare = async (name, address, phone, email, description) => {
+const createDayCare = async (daycare_name, address, phone_number, email, description) => {
         await fetch('http://localhost:8080/daycare', 
         {method : "POST",
          headers : {'Content-Type':'application/json'},
             body: JSON.stringify({
-                name : name,
+                daycare_name : daycare_name,
                 address : address,
-                phone : phone,
+                phone_number : phone_number,
                 email : email,
                 description : description
             })})
@@ -49,13 +49,13 @@ const getDayCare = async () => {
     
 };
 
-const createPlayDate = async (name, description, time) => {
+const createPlayDate = async (name, description,event_time) => {
     await fetch('http://localhost:8080/playDate', 
     {method : "POST",
      headers : {'Content-Type':'application/json'},
         body: JSON.stringify({
             title : name,
-            event_time : time,
+            event_time : event_time,
             description : description
         })})
         .then(({res}) => {
