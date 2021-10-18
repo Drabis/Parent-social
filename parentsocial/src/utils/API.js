@@ -17,14 +17,15 @@ const API = {
 const createDayCare = async (name, address, phone, email, description) => {
         await fetch('http://localhost:8080/daycare', 
         {method : "POST",
-         header : {'Content-Type':'application/json'},
+         headers : {'Content-Type':'application/json'},
             body: JSON.stringify({
                 name : name,
                 address : address,
                 phone : phone,
                 email : email,
                 description : description
-            })}).then(({res}) => {
+            })})
+            .then(({res}) => {
                 let data = res.json();
                 console.log(data)
                 return data;
