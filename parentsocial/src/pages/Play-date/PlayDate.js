@@ -79,9 +79,6 @@ function PlayDate() {
             </div>
         ))}
             
-
-            <Footer />
-            
         </div>
     )
 }
