@@ -52,7 +52,7 @@ function PlayDate() {
                 
                 <CardBody>
 
-                <CardTitle tag="h3">{title}</CardTitle>
+                <CardTitle tag="h4">{title}</CardTitle>
 
                 
                 <CardSubtitle tag="h5" className="mb-2 text-muted"></CardSubtitle>

@@ -4,9 +4,8 @@ import "./playday.css"
 import { SyntheticEvent } from "synthetic-event";
 // import axios from 'axios';
 import { createPlayDate } from '../../utils/API';
-import router from 'router';
 import { useHistory } from 'react-router';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -15,11 +14,11 @@ const PlayDayForm = (props) => {
   const history = useHistory();
 
   const [title, setTitle] = useState('');
-  const [eventTime, setEventTime] = useState('');
+  const [event_time, setEvent_time] = useState('');
   const [description, setDescription] = useState('');
 
   const submit = () => {
-    createPlayDate(title, description, eventTime);
+    createPlayDate(title, description, event_time);
     // history.push("/playdate");
   };
 
@@ -37,6 +36,13 @@ const PlayDayForm = (props) => {
         <Label for="exampleText">Description</Label>
         <Input type="textarea" name="text" id="exampleText" placeholder="What are offering today 😊?"
          onChange={(e) => {setDescription(e.target.value)}}
+        />
+
+      </FormGroup>
+      <FormGroup>
+        <Label for="exampleText">Time</Label>
+        <Input type="textarea" name="text" id="exampleText" placeholder="When is this event?"
+         onChange={(e) => {setEvent_time(e.target.value)}}
         />
 
       </FormGroup>
