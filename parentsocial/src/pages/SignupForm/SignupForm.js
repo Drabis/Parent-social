@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./signUp.css"
 
 import { Link, useHistory } from "react-router-dom";
 import API from "../../utils/API"

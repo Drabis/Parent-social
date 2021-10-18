@@ -39,13 +39,9 @@ const PlayDayForm = (props) => {
         />
 
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleText">Time</Label>
-        <Input type="textarea" name="text" id="exampleText" placeholder="When is this event?"
-         onChange={(e) => {setEvent_time(e.target.value)}}
-        />
+      
 
-      </FormGroup>
+    
 
  
 
