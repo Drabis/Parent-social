@@ -1,20 +1,19 @@
 .playDateCard{
+    background-color: white;
     display: block;
-    margin: auto;
+    /* margin: auto; */
     padding: 25px;
     /* width: 70%; */
-    width: 300px;
+    
+    
     box-shadow: 3px 3px grey, -1em 0 .4em rgb(141, 141, 106);
     border-radius: 15px 2px 15px 2px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5%;
+    
 }
-.cardContainer .cardBtn{
+.cardBtn{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+   
     background-color: #555;
     color: white;
     font-size: 16px;
@@ -24,13 +23,10 @@
     border-radius: 5px;
     text-align: center;
 }
-.cardContainer .cardBtn:hover {
+ .cardBtn:hover {
     background-color: black;
+    color: white;
   }
-/* .cardBtn{
-    background-color: turquoise;
-    width: 200px;
-    height: 50px;
-    border-radius: 15px;
-    border:transparent;
-} */
+  .deleteSign{
+      cursor: pointer;
+  }

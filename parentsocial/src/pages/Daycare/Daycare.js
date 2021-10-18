@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import "./daycare.css"
+import { useParams, useHistory } from "react-router-dom";
 import axios from 'axios';
+import "./daycare.css"
 import {
     Card, CardBody,
     CardTitle, CardSubtitle,CardText
@@ -10,7 +13,17 @@ import {
 
 function Daycare() {
     
+    const history = useHistory();
+    const { postId } = useParams();
     const [data, setData] = useState([]);
+
+    const handleDelete = async () => {
+        try {
+          await axios.delete("http://localhost:8080/daycare/" + postId);
+    
+          history.push("/home");
+        } catch (err) {}
+      };
 
 
     React.useEffect(() => {
@@ -37,16 +50,18 @@ function Daycare() {
     return (
         <div>
             <Header />
-            <Card className="cardContainer">
                 <Link to="/newDaycareForm">
                     <button className="cardBtn">Add a new Daycare</button>
                 </Link>
-            </Card>
+            
 
             {data.map(({id, daycare_name, address, phone_number, email, description}) => (
             <div key = {id}>
            
-             <Card className="daycareCard">
+             <div className="daycareCard">
+                <i
+                className="deleteSign"
+                onClick={handleDelete}>X</i>
                 <CardBody>
                 <CardTitle tag="h4">{daycare_name}</CardTitle>
                 
@@ -55,12 +70,10 @@ function Daycare() {
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{email}:</CardSubtitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{description}:</CardSubtitle>
                 </CardBody>
-            </Card>
+            </div>
             </div>
             ))} 
             
-
-            <Footer />
         
         </div>
     )
