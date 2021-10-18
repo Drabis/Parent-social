@@ -1,24 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
+import { useParams, useHistory } from "react-router-dom";
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import "./PlayDate.css"
 // import { getPlayDate } from '../../utils/API'
 import axios from 'axios';
-import {
-    Card, CardText, CardBody,
-    CardTitle, CardSubtitle,
-  } from 'reactstrap';
+
 
 
 function PlayDate() {
 
+    const history = useHistory();
+    const { postId } = useParams();
     const [data, setData] = useState([]);
+    // const [post, setPost] = useState();
 
+
+    const handleDelete = async (props) => {
+        try {
+          await axios.delete("http://localhost:8080/playDate/" + props.id);
+    
+          props.handleDelete(props.id);
+        } catch (err) {}
+      };
+ 
+    // const handleDelete = async () => {
+    //     try {
+    //       await axios.delete("http://localhost:8080/playDate/" + postId);
+    
+    //       history.push("/home");
+    //     } catch (err) {}
+    //   };
     
  React.useEffect(() => {
      axios.get('http://localhost:8080/playDate').then((response) => { 
 
+
+        
 
      const testData = [];
         for(const key in response.data) {
@@ -30,9 +49,7 @@ function PlayDate() {
             console.log(testData);
             console.log(playdate)
         }
-            
-         console.log(response);
-         console.log(response.data);
+
          setData(response.data)
      })
  }, []);
@@ -41,24 +58,23 @@ function PlayDate() {
     return (
         <div>
         <Header />
-    <Card className="cardContainer">
+    
                 <Link to="/PlayDayForm">
                     <button className="cardBtn">Add new play date</button>
                 </Link>
-    </Card>
-    {data.map(({id, title, description, event_time}) => (
+   
+            {data.map(({id, title, description, event_time}) => (
             <div key = {id}>
-            <Card className="playDateCard">
-                
-                <CardBody>
-
-                <CardTitle tag="h4">{title}</CardTitle>
-
-                
-                <CardSubtitle tag="h5" className="mb-2 text-muted"></CardSubtitle>
-                <CardText>{description}</CardText>
-                </CardBody>
-            </Card>
+            <div className="playDateCard">
+            <i
+            className="deleteSign"
+            onClick={handleDelete}>X</i>
+                <div className="main">
+                <h4>{title}</h4>
+                <span tag="h6" className="mb-2 text-muted"></span>
+                <span>{description}</span>
+                </div>
+            </div>
             
             </div>
         ))}
