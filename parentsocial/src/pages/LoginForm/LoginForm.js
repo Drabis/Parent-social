@@ -20,7 +20,7 @@ export default function SigninPage(props) {
   };
   const handleSignin = (e) => {
     e.preventDefault();
-    API.loginUser(formInput)
+    API.login(formInput)
       .then((response) => {
         if (response.status === 200) {
           props.handleUserSignin(response.data.user._id);
