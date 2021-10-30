@@ -2,14 +2,79 @@ import axios from "axios";
 
 const url = 'localhost:8080';
 
+// const API = {
+//     signupUser: input => {
+//         return axios.post(`${url}/user/`, input)
+//     },
+//     loginUser: input => {
+//         return axios.post(`${url}/user/`, input)
+//     },
+// }
+
+
 const API = {
-    signupUser: input => {
-        return axios.post(`${url}/user/`, input)
+    // login
+    login: async (username, password) => {
+      try {
+        const config = {
+          headers: {
+            'content-Type': 'application/json',
+          },
+        };
+  
+        const response = await axios.post(
+          `${url}/user`,
+          {
+            username: username,
+            password: password,
+          },
+          config
+        );
+  
+        if (response.status === 200) {
+          await localStorage.setItem(
+            'token',
+            JSON.stringify(response.data.jwt_token)
+          );
+        }
+  
+        return response;
+      } catch (error) {
+        return error.response.data;
+      }
     },
-    loginUser: input => {
-        return axios.post(`${url}/user/`, input)
+    // @signup
+    signup: async ( username, password,firstName, lastName) => {
+      try {
+        const config = {
+          headers: {
+            'content-Type': 'application/json',
+          },
+        };
+  
+        const request = await axios.post(
+          `${url}/user/signup`,
+          {
+            username: username,
+            password: password,
+            firstName: firstName,
+            lastName: lastName
+          },
+          config
+        );
+  
+        const response = {
+          status: request.status,
+        };
+  
+        return response;
+      } catch (error) {
+        return error.response.data;
+      }
     },
-}
+  };
+  
+
 
 
 

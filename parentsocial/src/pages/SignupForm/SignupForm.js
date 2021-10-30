@@ -31,7 +31,7 @@ export default function SigninPage(props) {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    API.signupUser(formInput).then((response) => {
+    API.signup(formInput).then((response) => {
       if (response.status === 200) {
         props.handleUserSignin();
         history.push("/home");
