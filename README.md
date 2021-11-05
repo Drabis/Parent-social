@@ -34,7 +34,7 @@ Click the GitHub link provided above to the APP REPO. Click on the green button 
 
 ## User Story
 
-As a fan of travels I would like to visit Africa and be in touch of its culture. I want to be able to learn from other that have been there before. So that I can better prepare my trip and know place to visit.
+As a busy parent I Would like to have access to a safe place for my children. I want to attend my interview, work on time and host others children on my free time.So that I can get more free time to complete other tasks and save money on services.
 
 
 
