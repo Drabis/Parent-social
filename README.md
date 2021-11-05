@@ -9,6 +9,9 @@
 - [License](#license)
 - [Author](#Author)
 
+<img width="524" alt="Screen Shot 2021-11-05 at 1 01 38 PM" src="https://user-images.githubusercontent.com/76567790/140549885-2a86d6fe-8f11-489c-9e99-787931cfab29.png">
+
+<img width="523" alt="Screen Shot 2021-11-05 at 1 01 59 PM" src="https://user-images.githubusercontent.com/76567790/140549914-9572904c-2bc0-4f14-9c6c-611409d08cac.png">
 
 
 
