@@ -42,7 +42,7 @@ As a busy parent I Would like to have access to a safe place for my children. I 
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-## Author
+## Authors
 
 Aboulaye Drabo,Mujinga Williams, Mark Clark,and Sylvester Nwizu 
 
